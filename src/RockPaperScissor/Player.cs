@@ -1,5 +1,5 @@
 using System;
-namespace RockPaperScissors
+namespace RockPaperScissor
 {
     public class Player
     {
@@ -9,16 +9,28 @@ namespace RockPaperScissors
             private set;
         }
 
-        public Move Handsign
+        public Choice Option
         {
             get;
-            private set;
+             set;
 
+        }
+
+        public int Score
+        {
+            get;
+            set;
         }
 
         public Player (string name)
         {
             Name = name;
+            Score = 0;
+        }
+
+        public void Scored ()
+        {
+            Score += 1;
         }
     }
 }
